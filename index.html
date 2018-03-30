@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search ATM App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header class="start-display">
+        <div class="header-content">
+            <h1>Welcome to ATM search application</h1>
+            <h3 class="location-title">To be able for using this application you must turn on your location</h3>
+
+            <button id="turnOnLocation" type="button" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#collapseExample"
+             data-target='#collapseMain' aria-expanded="false" aria-controls="collapseExample">Turn on location
+            </button>
+
+            <div class="location-error"></div>
+
+        </div>
+    </header>
+
+
+    <main class="collapse col-sm-12" id="collapseExample">
+
+        <div class="card card-body">
+
+            <div class="col-sm-12">
+                <h3>Search 10 closest Telenor ATMs</h3>
+
+                <button type="button" class="btn btn-primary" id="searchATM">Search ATM</button>
+
+                <h3>Here you can find special place</h3>
+
+                <input type="text" class="form-control" id="search-place" id="validationServer04" placeholder="Search place" required>
+
+                <div class="invalid-feedback">
+                    Please enter location.
+                </div>
+
+                <button type="button" class="btn btn-primary" id="search-place-btn">Search place</button>
+
+            </div>
+
+            <div class="col-sm-12">
+                <ul id="atm-list" class="list-group"></ul>
+            </div>
+
+
+            <div id="out"></div>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script data-main='scripts/index.js' src="scripts/require.js"></script>
+    <script src="scripts/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1p7Hyh2qFXhpq2non5YE4WFR62PzOztg"></script>
+
+</body>
+
+</html>

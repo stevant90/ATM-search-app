@@ -1,0 +1,46 @@
+.card {
+
+    background-color: rgba(241, 241, 241, 0.925);
+}
+
+span {
+
+    font-size: .8em;
+}
+
+#search-place-btn {
+
+    margin: 1em 0 1em 0;
+    background: $btn-color;
+    
+}
+
+#searchATM {
+
+    margin: 1em 0 1em 0;
+    background: $btn-color;
+}
+
+#atm-list {
+
+    list-style-type: upper-alpha;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+
+#turnOnLocation {
+    
+    margin-top: 2em;
+    font-weight: bold;
+    background-color: $btn-color;
+    border: none;
+      
+  }
+    
+#out {
+        
+    height: 400px;
+    width: 100%;
+
+}

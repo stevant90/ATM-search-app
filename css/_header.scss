@@ -1,0 +1,46 @@
+h1 {
+
+    font-family: $title-font;
+    color: $h1-color;
+    font-weight: bold;
+
+    @media screen and (min-width: 992px) {
+        
+        font-size: 3em;
+    }
+  
+}
+
+h3 {
+
+    font-family: $title-font;
+    font-size: 1.3em;
+
+    @media screen and (min-width: 992px) {
+        
+        font-size: 1.5em;
+    }
+}
+
+.remove-location-title {
+
+    display: none;
+}
+
+.start-display {
+
+    padding: 1em;
+    text-align: center;
+}
+
+.header-content {
+
+    margin-top: 9em;
+    @include transition(margin 2s ease-in);
+}
+
+.move-header {
+
+    margin-top: 1em;
+    @include transition(margin 2s ease-out);
+}

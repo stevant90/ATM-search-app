@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Karla|Patua+One');
+
+$title-font: 'Patua One', cursive;
+$text-font: 'Karla', sans-serif;
+$background-color: rgba(48, 10, 48, 0.699);
+$h1-color: black;
+$btn-color: rgb(8, 9, 77);
+
+@mixin transition($units) {
+    
+    -webkit-transition: $units;
+    -moz-transition: $units;
+    -os-transition: $units;
+    transition: $units;
+}
