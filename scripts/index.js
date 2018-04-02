@@ -5,6 +5,7 @@ define(function (require) {
     var showUI = require('./showUI');
 
     var startError = document.querySelector('.location-error');
+    var output = document.getElementById('out');
 
     if (!navigator.geolocation) {
         startError.innerText = 'Geolocation is not supported by your browser';
