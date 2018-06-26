@@ -1,7 +1,7 @@
 define(function (require) {
     
 
-     var convert =  require('../node_modules/cyrillic-to-latin/cyrillicToLatin');
+//      var convert =  require('../node_modules/cyrillic-to-latin/cyrillicToLatin');
         
 
     function initMap(longitude, latitude) {
@@ -91,13 +91,13 @@ define(function (require) {
         var listItem = document.createElement('li');
         var span = document.createElement('span');
   
-        var bankName = convert(place.name);
-        var bankAddress = convert(place.vicinity);
+//         var bankName = convert(place.name);
+//         var bankAddress = convert(place.vicinity);
 
         listItem.classList.add('list-group-item');
 
-        span.innerText = bankAddress;
-        listItem.innerText = bankName + ', ';
+        span.innerText = place.vicinity;
+        listItem.innerText = place.name + ', ';
         listItem.appendChild(span);
 
         atmList.appendChild(listItem);
