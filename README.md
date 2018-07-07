@@ -5,4 +5,4 @@ For this project Vanilla JS was used, and for code organization AMD was used. AP
 Google Places API. For style css, sass and bootstrap were used.
 
 
-DEMO: [ATM-search-app](https://stevant90.github.io/ATM-search-app/)
+DEMO: [ATM-search-app](https://stevant90.github.io/atm-search-app/)
