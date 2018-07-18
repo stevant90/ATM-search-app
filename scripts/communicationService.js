@@ -4,7 +4,7 @@ define(function (require) {
     var showUI = require('./showUI');
     var errors = require('./handleErrors');
 
-    var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    // var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     var baseUrl = address.baseUrl;
     var getAllPlaces = address.getAllPlaces;
     var radiusAndTerm = address.radiusAndTerm;
@@ -33,7 +33,7 @@ define(function (require) {
                 return;
             }
 
-            fetch(proxyUrl + baseUrl + getAllPlaces + latitude + ',' + longitude + radiusAndTerm + placesKey)
+            fetch(baseUrl + getAllPlaces + latitude + ',' + longitude + radiusAndTerm + placesKey)
                 .then(response => response.json())
                 .then(response => {
                     getSinglePlace(response.results.slice(0, 10));
@@ -50,7 +50,7 @@ define(function (require) {
         for (var i = 0; i < places.length; i++) {
             var placeId = places[i].place_id;
 
-            fetch(proxyUrl + baseUrl + placeDetails + placeId + placesKey)
+            fetch(baseUrl + placeDetails + placeId + placesKey)
                 .then(response => response.json())
                 .then(response => displayList(response.result))
                 .catch(error => alert('Something went wrong'));
@@ -69,7 +69,7 @@ define(function (require) {
                 return;
             }
 
-            fetch(proxyUrl + baseUrl + textSearchUrl + location + '+' + placesKey)
+            fetch(baseUrl + textSearchUrl + location + '+' + placesKey)
                 .then(response => response.json())
                 .then(response => refreshMapOnInputSearch(response.results, latitude, longitude))
                 .catch(error => alert('Something went wrong'));
