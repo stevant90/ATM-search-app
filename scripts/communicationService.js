@@ -4,7 +4,7 @@ define(function (require) {
     var showUI = require('./showUI');
     var errors = require('./handleErrors');
 
-    var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+    var proxyUrl = 'https://cors-github.io.herokuapp.com/';
     var baseUrl = address.baseUrl;
     var getAllPlaces = address.getAllPlaces;
     var radiusAndTerm = address.radiusAndTerm;
