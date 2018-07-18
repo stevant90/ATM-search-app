@@ -33,7 +33,7 @@ define(function (require) {
                 return;
             }
 
-            fetch(baseUrl + getAllPlaces + latitude + ',' + longitude + radiusAndTerm + placesKey)
+            fetch(baseUrl + getAllPlaces + latitude + ',' + longitude + radiusAndTerm + placesKey, {'mode': 'no-cors'})
                 .then(response => response.json())
                 .then(response => {
                     getSinglePlace(response.results.slice(0, 10));
@@ -50,7 +50,7 @@ define(function (require) {
         for (var i = 0; i < places.length; i++) {
             var placeId = places[i].place_id;
 
-            fetch(baseUrl + placeDetails + placeId + placesKey)
+            fetch(baseUrl + placeDetails + placeId + placesKey, {'mode': 'no-cors'})
                 .then(response => response.json())
                 .then(response => displayList(response.result))
                 .catch(error => alert('Something went wrong'));
@@ -69,7 +69,7 @@ define(function (require) {
                 return;
             }
 
-            fetch(baseUrl + textSearchUrl + location + '+' + placesKey)
+            fetch(baseUrl + textSearchUrl + location + '+' + placesKey, {'mode': 'no-cors'})
                 .then(response => response.json())
                 .then(response => refreshMapOnInputSearch(response.results, latitude, longitude))
                 .catch(error => alert('Something went wrong'));
